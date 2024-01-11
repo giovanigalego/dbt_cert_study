@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: mongo_flix
+    database: gg_dbt_raw
+    schema: mongo_flix 
+    tables:
+      - name: _AIRBYTE_RAW_USERS
+      - name: _AIRBYTE_RAW_THEATERS
+      - name: _AIRBYTE_RAW_MOVIES
+      - name: _AIRBYTE_RAW_COMMENTS
+
+  - name: stripe
+    tables:
+      - name: payments
