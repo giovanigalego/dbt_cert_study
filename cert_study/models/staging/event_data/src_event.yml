@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: event_data
+    database: gg_dbt_raw
+    schema: dataset
+    tables:
+      - name: demo_data
