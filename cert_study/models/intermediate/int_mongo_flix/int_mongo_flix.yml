@@ -18,3 +18,9 @@ models:
         favorite_color: red
       # grants: {<dictionary>}
       # contract: {<dictionary>}
+    columns:
+      - name: rated
+        tests:
+          - unique:
+              config:
+                store_failures: true
