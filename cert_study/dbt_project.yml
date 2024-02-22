@@ -17,6 +17,7 @@ test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+docs-paths: ["docs"]
 
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
@@ -34,8 +35,12 @@ models:
   cert_study:
     # Config indicated by + and applies to all files under models/example/
     staging:
-      +schema: staging
       +materialized: view
+      event_data:
+        +schema: stg_event
+      mongo_flix:
+        +schema: stg_mongo
+
     intermediate:
       +schema: transform
       +materialized: view

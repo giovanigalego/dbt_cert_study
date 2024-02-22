@@ -6,7 +6,7 @@ with int_users as (
 )
 
 select
-    ,_id
+    _id
     ,email
     ,name
     ,password

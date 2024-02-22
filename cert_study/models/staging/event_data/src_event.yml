@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: event_data
-    database: gg_dbt_raw
-    schema: dataset
+    database: GG_DBT_RAW
+    schema: DATASET
     tables:
       - name: demo_data
